@@ -1,24 +1,59 @@
-import React from 'react';
-import logo from './logo.svg';
+import { useEffect, useState } from 'react';
 import './App.css';
+import Checkbox from './Components/Checkbox';
+import FrequentChars from './Components/FrequentChars';
+import InputWithHighlight from './Components/InputWithHighlight';
 
 function App() {
+  /*
+  Since the app is very simple, we will handle our main state changes here and pass it down
+  */
+  const [text, setText] = useState("");
+  const [filteredText, setFilteredText] = useState("");
+  const [isCaseSensitve, setIsCaseSensitive] = useState(true);
+  const [isAlph, setIsAlph] = useState(false);
+
+  useEffect(() => {
+    let filtered = text;
+
+    if (isAlph) {
+      filtered = filtered.replace(/[^A-Za-z]/gi, '');
+    }
+    if (!isCaseSensitve) {
+      filtered = filtered.toLowerCase();
+    }
+
+    setFilteredText(filtered);
+  }, [text, isCaseSensitve, isAlph]);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="title">
+        <h1>
+          Spy Tool
+        </h1>
+
+        <Checkbox
+          value={isCaseSensitve}
+          setter={setIsCaseSensitive}
+          title="Case Sensitive?"
+        />
+
+        <Checkbox
+          value={isAlph}
+          setter={setIsAlph}
+          title="Only alphabet?"
+        />
+      </div>
+
+      <InputWithHighlight
+        text={text}
+        setText={setText}
+      />
+
+      <FrequentChars
+        text={filteredText}
+      />
     </div>
   );
 }

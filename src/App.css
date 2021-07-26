@@ -1,38 +1,80 @@
+/* our h@cker font :-) */
+/* font-family: 'Cutive Mono', monospace; */
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap');
+
+body {
+  background-color: #edf2f7;
+}
+
+h1 {
+  color: #023047;
+  font-size: 3rem;
+}
+
 .App {
   text-align: center;
+  font-family: 'Cutive Mono', monospace;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.title {
+  background-color: #f0cc3b;
+  padding: 10px;
+  box-shadow:
+    0 6.7px 5.3px rgba(0, 0, 0, 0.028),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.042),
+    0 100px 80px rgba(0, 0, 0, 0.07)
+  ;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.inputcontainer {
+  margin: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.appinput {
+  border-style: none;
+  border-radius: 15px;
+  padding: 10px;
+  width: 60vw;
+  font-size: 1.2rem;
+  box-shadow:
+    0 6.7px 5.3px rgba(0, 0, 0, 0.028),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.042),
+    0 100px 80px rgba(0, 0, 0, 0.07)
+  ;
+  border: none;
+  overflow: auto;
+  outline: none;
+
+  resize: none; /*remove the resize handle on the bottom right*/
+}
+
+.charCountContainer {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: .2rem;
 }
 
-.App-link {
-  color: #61dafb;
+.charCount {
+  padding: 1px;
+  border-radius: 5px;
+  padding: 0px 5px;
+
+  transition: ease-in 0.2s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.topFive {
+  background-color: #2a9d8f;
+  color: white
+}
+
+@media only screen and (max-width: 1000px) {
+  .appinput {
+    width: 80vw;
   }
-  to {
-    transform: rotate(360deg);
-  }
+}
+
+
+.charCountPulse {
+  animation: pulse 1s;
 }
