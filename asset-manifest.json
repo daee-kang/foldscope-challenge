@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/foldscope-challenge/static/css/main.3cdd7f49.chunk.css",
+    "main.js": "/foldscope-challenge/static/js/main.5ac3c6f3.chunk.js",
+    "main.js.map": "/foldscope-challenge/static/js/main.5ac3c6f3.chunk.js.map",
+    "runtime-main.js": "/foldscope-challenge/static/js/runtime-main.85eddce8.js",
+    "runtime-main.js.map": "/foldscope-challenge/static/js/runtime-main.85eddce8.js.map",
+    "static/js/2.69906c26.chunk.js": "/foldscope-challenge/static/js/2.69906c26.chunk.js",
+    "static/js/2.69906c26.chunk.js.map": "/foldscope-challenge/static/js/2.69906c26.chunk.js.map",
+    "static/js/3.83a2c17d.chunk.js": "/foldscope-challenge/static/js/3.83a2c17d.chunk.js",
+    "static/js/3.83a2c17d.chunk.js.map": "/foldscope-challenge/static/js/3.83a2c17d.chunk.js.map",
+    "index.html": "/foldscope-challenge/index.html",
+    "static/css/main.3cdd7f49.chunk.css.map": "/foldscope-challenge/static/css/main.3cdd7f49.chunk.css.map",
+    "static/js/2.69906c26.chunk.js.LICENSE.txt": "/foldscope-challenge/static/js/2.69906c26.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.85eddce8.js",
+    "static/js/2.69906c26.chunk.js",
+    "static/css/main.3cdd7f49.chunk.css",
+    "static/js/main.5ac3c6f3.chunk.js"
+  ]
+}
